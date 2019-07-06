@@ -1,0 +1,30 @@
+{
+  "name": "vue-ci",
+  "version": "1.0.0",
+  "description": "This project builds a docker container for use with Vue.js and Snyk in both a local and CI environment. ",
+  "main": "index.js",
+  "scripts": {
+    "check4updates": "ncu -e2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorianvo/vue-ci.git"
+  },
+  "keywords": [
+    "vue.js",
+    "ci"
+  ],
+  "author": "Jorian van Oostenbrugge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorianvo/vue-ci/issues"
+  },
+  "homepage": "https://github.com/jorianvo/vue-ci#readme",
+  "dependencies": {
+    "@vue/cli": "3.9.2",
+    "npm-check-updates": "3.1.14",
+    "snyk": "1.192.3",
+    "vue": "2.6.10"
+  }
+}
