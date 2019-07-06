@@ -16,7 +16,7 @@
     "ci"
   ],
   "author": "Jorian van Oostenbrugge",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jorianvo/vue-ci/issues"
   },
