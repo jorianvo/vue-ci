@@ -12,3 +12,4 @@ deploy:
   script: bash docker_push.sh
   on:
     branch: master
+    condition: $TRAVIS_EVENT_TYPE != cron
