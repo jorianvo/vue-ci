@@ -7,6 +7,8 @@ before_install:
   - docker build -t "$DOCKER_IMAGE" .
   - docker run "$DOCKER_IMAGE" npm run check4updates
 
+install: true
+
 deploy:
   provider: script
   script: bash docker_push.sh
