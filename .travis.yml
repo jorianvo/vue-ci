@@ -5,6 +5,10 @@ services:
 
 before_install:
   - docker build -t "$DOCKER_IMAGE" .
+
+install: true
+
+script:
   - docker run "$DOCKER_IMAGE" npm run check4updates
 
 deploy:
@@ -12,3 +16,4 @@ deploy:
   script: bash docker_push.sh
   on:
     branch: master
+    condition: $TRAVIS_EVENT_TYPE != cron
