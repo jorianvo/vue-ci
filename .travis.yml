@@ -3,17 +3,17 @@ language: node_js
 services:
   - docker
 
-before_install:
-  - docker build -t "$DOCKER_IMAGE":"$today"-"$TRAVIS_COMMIT" .
-
 install: true
+
+before_script:
+  - bash build_deploy.sh build
 
 script:
   - docker run "$DOCKER_IMAGE" npm run check4updates
 
 deploy:
   provider: script
-  script: bash docker_push.sh
+  script: bash build_deploy.sh deploy
   on:
     branch: master
     condition: $TRAVIS_EVENT_TYPE != cron
