@@ -6,14 +6,14 @@ services:
 install: true
 
 before_script:
-  - bash build_deploy.sh build
+  - bash ci.sh build
 
 script:
-  - docker run "$DOCKER_IMAGE" npm run check4updates
+  - bash ci.sh run
 
 deploy:
   provider: script
-  script: bash build_deploy.sh deploy
+  script: bash ci.sh deploy
   on:
     branch: master
     condition: $TRAVIS_EVENT_TYPE != cron
