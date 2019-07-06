@@ -5,9 +5,11 @@ services:
 
 before_install:
   - docker build -t "$DOCKER_IMAGE" .
-  - docker run "$DOCKER_IMAGE" npm run check4updates
 
 install: true
+
+script:
+  - docker run "$DOCKER_IMAGE" npm run check4updates
 
 deploy:
   provider: script
