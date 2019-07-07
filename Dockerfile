@@ -4,4 +4,6 @@ ENV PATH="/app/node_modules/.bin:${PATH}"
 
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
+RUN apt-get update && apt-get install -y git && \ 
+    rm -rf /var/lib/apt/lists/* && \
+    npm ci
