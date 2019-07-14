@@ -9,11 +9,12 @@ before_script:
   - bash ci.sh build
 
 script:
-  - bash ci.sh run
+  - bash ci.sh check4updates
 
 deploy:
   provider: script
-  script: bash ci.sh deploy
+  script: bash ci.sh push
   on:
     branch: master
     condition: $TRAVIS_EVENT_TYPE != cron
+    tags: true

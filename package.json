@@ -4,7 +4,8 @@
   "description": "This project builds a docker container for use with Vue.js and Snyk in both a local and CI environment. ",
   "main": "index.js",
   "scripts": {
-    "check4updates": "ncu -e 2"
+    "check4updates": "ncu -e 2",
+    "update": "ncu -u"
   },
   "repository": {
     "type": "git",
