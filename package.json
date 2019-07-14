@@ -22,8 +22,8 @@
   "homepage": "https://github.com/jorianvo/vue-ci#readme",
   "dependencies": {
     "@vue/cli": "3.9.2",
-    "npm-check-updates": "3.1.15",
-    "snyk": "1.192.3",
+    "npm-check-updates": "3.1.20",
+    "snyk": "1.193.1",
     "vue": "2.6.10"
   }
 }
