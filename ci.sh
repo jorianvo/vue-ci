@@ -32,11 +32,8 @@ function push () {
 }
 
 case $1 in
-    build)
-        build
-        ;;
-    
     check4updates)
+        build
         check4updates
         ;;
 
