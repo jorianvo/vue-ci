@@ -6,11 +6,12 @@ function _run () {
 }
 
 function build () {
+    local _VUE_VERSION=$(node vueVersion.js)
+    local _TAG_MAJOR_PATCH=$(node vueVersion.js --short)
+    
     # Locally we don't have node installed (or access to travis the build env variables)
     # so we just build the image using the latest tag
     if command -v node >/dev/null 2>&1; then
-        local _VUE_VERSION=$(node vueVersion.js)
-        local _TAG_MAJOR_PATCH=$(node vueVersion.js --short)
         _TAG="${_VUE_VERSION}-b${TRAVIS_BUILD_NUMBER}"
         docker build -t "$_IMAGE:${_TAG}" -t "$_IMAGE:${_TAG_MAJOR_PATCH}" .
     else
