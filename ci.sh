@@ -2,16 +2,17 @@
 readonly _IMAGE="jorianvo/vue-ci"
 
 function _run () {
-    docker run -v "$PWD:/site" -w "/site" "$_IMAGE":"$_TAG" $1
+    docker run -v "$PWD:/site" -w "/site" "$_IMAGE:${_TAG}" $1
 }
 
 function build () {
     # Locally we don't have node installed (or access to travis the build env variables)
     # so we just build the image using the latest tag
     if command -v node >/dev/null 2>&1; then
-        _VUE_VERSION=$(node vueVersion.js)
-        _TAG_MAJOR_PATCH=$(node vueVersion.js --short)
-        docker build -t "$_IMAGE:${_VUE_VERSION}-b${TRAVIS_BUILD_NUMBER}" -t "$_IMAGE:${_TAG_MAJOR_PATCH}" .
+        local _VUE_VERSION=$(node vueVersion.js)
+        local _TAG_MAJOR_PATCH=$(node vueVersion.js --short)
+        _TAG="${_VUE_VERSION}-b${TRAVIS_BUILD_NUMBER}"
+        docker build -t "$_IMAGE:${_TAG}" -t "$_IMAGE:${_TAG_MAJOR_PATCH}" .
     else
         docker build -t "$_IMAGE:latest" .
     fi
