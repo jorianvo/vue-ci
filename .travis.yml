@@ -5,9 +5,6 @@ services:
 
 install: true
 
-before_script:
-  - bash ci.sh build
-
 script:
   - bash ci.sh check4updates
 
