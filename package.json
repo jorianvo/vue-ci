@@ -24,7 +24,8 @@
   "dependencies": {
     "@vue/cli": "3.10.0",
     "npm-check-updates": "3.1.21",
-    "snyk": "1.217.0",
-    "vue": "2.6.10"
+    "snyk": "1.217.3",
+    "vue": "2.6.10",
+    "netlify-cli": "2.12.0"
   }
 }
