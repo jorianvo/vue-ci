@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/jorianvo/vue-ci#readme",
   "dependencies": {
-    "@vue/cli": "3.10.0",
-    "npm-check-updates": "3.1.21",
-    "snyk": "1.217.3",
+    "@vue/cli": "3.11.0",
+    "npm-check-updates": "3.1.23",
+    "snyk": "1.228.2",
     "vue": "2.6.10",
-    "netlify-cli": "2.12.0"
+    "netlify-cli": "2.15.0"
   }
 }
