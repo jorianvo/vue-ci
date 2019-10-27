@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "check4updates": "ncu -e 2",
+    "check4updates:minor": "ncu -e 2 --semverLevel minor",
     "update": "ncu -u"
   },
   "repository": {
@@ -23,9 +24,16 @@
   "homepage": "https://github.com/jorianvo/vue-ci#readme",
   "dependencies": {
     "@vue/cli": "3.11.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "netlify-cli": "2.15.0",
     "npm-check-updates": "3.1.23",
     "snyk": "1.228.2",
-    "vue": "2.6.10",
-    "netlify-cli": "2.15.0"
+    "vue": "2.6.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
