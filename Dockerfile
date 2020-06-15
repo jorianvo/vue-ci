@@ -1,4 +1,4 @@
-FROM node:10.16.0-jessie-slim
+FROM node:12.18.0-buster-slim
 
 ENV PATH="/app/node_modules/.bin:${PATH}"
 
