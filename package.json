@@ -6,7 +6,9 @@
   "scripts": {
     "check4updates": "ncu -e 2",
     "check4updates:minor": "ncu -e 2 --semverLevel minor",
-    "update": "ncu -u"
+    "update": "ncu -u",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,12 +31,13 @@
     "cz-conventional-changelog": "^3.2.0",
     "netlify-cli": "2.54.0",
     "npm-check-updates": "7.0.1",
-    "snyk": "1.341.1",
+    "snyk": "^1.341.1",
     "vue": "2.6.11"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "snyk": true
 }
