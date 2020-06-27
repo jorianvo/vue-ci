@@ -5,9 +5,9 @@ This project builds a docker container for use with Vue.js and Snyk in both a de
 
 | package           | version 	|
 |-----------------  |---------	|
-| create-nuxt-app   | 2.15.0    |
+| create-nuxt-app   | 3.1.0     |
 | netlify-cli       | 2.54.0    |
 | npm     	        | 6.14.5    |
-| snyk    	        | 1.341.1   |
+| snyk    	        | 1.349.0   |
 | vue     	        | 2.6.11    |
-| vue-cli 	        | 4.4.4     |
+| vue-cli 	        | 4.4.6     |
