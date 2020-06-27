@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.15.0
+version: v1.16.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -8,3 +8,17 @@ patch:
         patched: '2020-06-15T20:02:20.311Z'
     - create-nuxt-app > sao > inquirer > lodash:
         patched: '2020-06-15T20:02:20.311Z'
+    - '@vue/cli > @babel/preset-env > @babel/plugin-transform-block-scoping > lodash':
+        patched: '2020-06-27T19:20:24.429Z'
+    - '@vue/cli > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > lodash':
+        patched: '2020-06-27T19:20:24.429Z'
+    - '@vue/cli > @babel/preset-env > @babel/plugin-transform-unicode-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2020-06-27T19:20:24.429Z'
+    - '@vue/cli > @babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2020-06-27T19:20:24.429Z'
+    - '@vue/cli > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-06-27T19:20:24.429Z'
+    - '@vue/cli > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-06-27T19:20:24.429Z'
+    - '@vue/cli > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-06-27T19:20:24.429Z'
