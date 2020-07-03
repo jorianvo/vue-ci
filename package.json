@@ -29,9 +29,9 @@
     "commitizen": "^4.1.2",
     "create-nuxt-app": "^3.1.0",
     "cz-conventional-changelog": "^3.2.0",
-    "netlify-cli": "2.54.0",
+    "netlify-cli": "2.57.0",
     "npm-check-updates": "7.0.1",
-    "snyk": "^1.349.0",
+    "snyk": "^1.360.0",
     "vue": "2.6.11"
   },
   "config": {
