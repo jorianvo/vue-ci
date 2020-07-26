@@ -5,6 +5,7 @@ This project builds a docker container for use with Vue.js in both a dev and CI 
 
 | package           | version 	|
 |-----------------  |---------	|
+| @aws-amplify/cli  | 4.25.0    |
 | create-nuxt-app   | 3.1.0     |
 | netlify-cli       | 2.54.0    |
 | npm     	        | 6.14.5    |

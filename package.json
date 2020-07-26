@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jorianvo/vue-ci#readme",
   "dependencies": {
+    "@aws-amplify/cli": "^4.25.0",
     "@vue/cli": "4.4.6",
     "commitizen": "^4.1.2",
     "create-nuxt-app": "^3.1.0",
