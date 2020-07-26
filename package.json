@@ -6,9 +6,7 @@
   "scripts": {
     "check4updates": "ncu -e 2",
     "check4updates:minor": "ncu -e 2 --semverLevel minor",
-    "update": "ncu -u",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "update": "ncu -u"
   },
   "repository": {
     "type": "git",
@@ -29,9 +27,8 @@
     "commitizen": "^4.1.2",
     "create-nuxt-app": "^3.1.0",
     "cz-conventional-changelog": "^3.2.0",
-    "netlify-cli": "2.57.0",
-    "npm-check-updates": "7.0.1",
-    "snyk": "^1.360.0",
+    "netlify-cli": "2.58.0",
+    "npm-check-updates": "7.0.2",
     "vue": "2.6.11"
   },
   "config": {
