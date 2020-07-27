@@ -19,7 +19,8 @@ RUN apt-get update && \
 
 USER node
 
-RUN pwd && npm install -g npm && \
+RUN npm install -g npm && \
+    npm install -g @aws-amplify/cli && \
     npm ci
 
 WORKDIR /home/node/site
