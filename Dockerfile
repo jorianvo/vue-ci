@@ -4,8 +4,7 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
 ENV PATH="/home/node/app/node_modules/.bin:${PATH}"
 
-RUN mkdir /home/node/app && \ 
-    mkdir /home/node/site && \
+RUN mkdir /home/node/app && \
     chown -R node:node /home/node
 
 WORKDIR /home/node/app
@@ -22,7 +21,5 @@ USER node
 RUN npm install -g npm && \
     npm install -g @aws-amplify/cli && \
     npm ci
-
-WORKDIR /home/node/site
 
 ENTRYPOINT [ "bash", "-c" ]
