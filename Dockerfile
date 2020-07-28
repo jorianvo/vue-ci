@@ -1,11 +1,13 @@
 FROM node:12.18.2-buster-slim
 
-ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
-ENV PATH=$PATH:/home/node/.npm-global/bin
 ENV PATH="/home/node/app/node_modules/.bin:${PATH}"
 
+# We have to install the amplify cli globally (as root)
+# as AWS expects it to live in /usr/bin
 RUN mkdir /home/node/app && \
-    chown -R node:node /home/node
+    chown -R node:node /home/node && \
+    npm install -g npm && \
+    npm install -g @aws-amplify/cli
 
 WORKDIR /home/node/app
 
@@ -18,7 +20,6 @@ RUN apt-get update && \
 
 USER node
 
-RUN npm install -g npm && \
-    npm ci
+RUN npm ci
 
 ENTRYPOINT [ "bash", "-c" ]
