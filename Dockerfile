@@ -14,7 +14,7 @@ COPY --chown=node:node package*.json ./
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y curl git ssh vim --no-install-recommends && \ 
+    DEBIAN_FRONTEND=noninteractive apt-get install -y curl git openssl ssh vim --no-install-recommends && \ 
     rm -rf /var/lib/apt/lists/*
 
 USER node
