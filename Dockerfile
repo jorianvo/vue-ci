@@ -19,7 +19,6 @@ RUN apt-get update && \
 USER node
 
 RUN npm install -g npm && \
-    npm install -g @aws-amplify/cli && \
     npm ci
 
 ENTRYPOINT [ "bash", "-c" ]
