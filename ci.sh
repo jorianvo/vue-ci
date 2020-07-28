@@ -11,7 +11,7 @@ function _run () {
         local _TAG_MAJOR_PATCH=$(node vueVersion.js --short)
         local _TAG="${_VUE_VERSION}-b${TRAVIS_BUILD_NUMBER}"
     fi
-    docker run -v "$PWD:/site" -w "/site" "$_IMAGE:${_TAG}" $1
+    docker run -v "$PWD:/site" -w "/site" "$_IMAGE:${_TAG}" "$1"
 }
 
 function build () {
