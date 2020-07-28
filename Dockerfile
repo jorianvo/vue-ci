@@ -24,3 +24,5 @@ RUN npm install -g npm && \
     npm ci
 
 WORKDIR /home/node/site
+
+ENTRYPOINT [ "bash", "-c" ]
