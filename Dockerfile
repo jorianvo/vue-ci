@@ -7,8 +7,7 @@ ENV PATH="/home/node/app/node_modules/.bin:${PATH}"
 RUN mkdir /home/node/app && \
     chown -R node:node /home/node && \
     npm install -g npm && \
-    npm install -g @aws-amplify/cli && \
-    npm install -g yarn
+    npm install -g @aws-amplify/cli
 
 WORKDIR /home/node/app
 
