@@ -10,6 +10,9 @@ jobs:
   build:
     name: Branch build
     runs-on: ubuntu-latest
+    with:
+      token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      persist-credentials: false
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
