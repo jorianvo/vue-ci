@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: jorianvo/vue-ci:$TAG
+          tags: jorianvo/vue-ci:${{env.TAG}}
