@@ -2,37 +2,21 @@
 readonly _IMAGE="jorianvo/vue-ci"
 
 function _run () {
-    # If we don't have access to the travis build environment
-    # we run locally hence we just use 'latest' as tag
-    if [ -z "${TRAVIS_BUILD_NUMBER}" ]; then
-        local _TAG="latest"
-    else
-        local _VUE_VERSION=$(node vueVersion.js)
-        local _TAG_MAJOR_PATCH=$(node vueVersion.js --short)
-        local _TAG="${_VUE_VERSION}-b${TRAVIS_BUILD_NUMBER}"
-    fi
+    local _TAG=$npm_package_version
     docker run -v "$PWD:/site" -w "/site" "$_IMAGE:${_TAG}" "$1"
 }
 
 function build () {
-    # If we don't have access to the travis build environment
-    # we run locally hence we just use 'latest' as tag
-    if [ -z "${TRAVIS_BUILD_NUMBER}" ]; then
-        docker build -t "$_IMAGE:latest" .
-    else
-        local _VUE_VERSION=$(node vueVersion.js)
-        local _TAG_MAJOR_PATCH=$(node vueVersion.js --short)
-        local _TAG="${_VUE_VERSION}-b${TRAVIS_BUILD_NUMBER}"
-        docker build -t "$_IMAGE:${_TAG}" -t "$_IMAGE:${_TAG_MAJOR_PATCH}" .
-    fi
+    local _TAG=$npm_package_version
+    docker build -t "$_IMAGE:${_TAG}" .
 }
 
 function check4updates () {
-    _run "npm run check4updates"
+    _run "npm outdated"
 }
 
 function upgrade () {
-    _run "npm run update"
+    _run "npm update"
     _run "npm install"
 }
 
@@ -42,8 +26,11 @@ function push () {
 }
 
 case $1 in
-    check4updates)
+    build)
         build
+        ;;
+
+    check4updates)
         check4updates
         ;;
 
