@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          persist-credentials: false
       - name: Set tag
         run: echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Set up Docker Buildx
