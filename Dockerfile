@@ -1,4 +1,4 @@
-FROM node:12.18.4-buster-slim
+FROM node:14.15.1-buster
 
 ENV PATH="/home/node/app/node_modules/.bin:${PATH}"
 
@@ -7,7 +7,9 @@ ENV PATH="/home/node/app/node_modules/.bin:${PATH}"
 RUN mkdir /home/node/app && \
     chown -R node:node /home/node && \
     npm install -g npm && \
-    npm install -g @aws-amplify/cli
+    npm install -g @aws-amplify/cli && \
+    npm install -g @vue/cli && \
+    npm install -g netlify-cli
 
 WORKDIR /home/node/app
 
