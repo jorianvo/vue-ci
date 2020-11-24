@@ -6,10 +6,11 @@ ENV PATH="/home/node/app/node_modules/.bin:${PATH}"
 # as AWS expects it to live in /usr/bin
 RUN mkdir /home/node/app && \
     chown -R node:node /home/node && \
-    npm install -g npm && \
     npm install -g @aws-amplify/cli && \
     npm install -g @vue/cli && \
-    npm install -g netlify-cli
+    npm install -g gulp-cli && \
+    npm install -g netlify-cli && \
+    npm install -g npm
 
 WORKDIR /home/node/app
 
